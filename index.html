@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <a href="#home" class="logo" id="logo">Portfolio</a>
+  <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#about">About Me</a><a href="#education">Education</a><a href="#skills">Skills</a>
+    <a href="#projects">Projects</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <p class="hello">Hello, I'm</p>
+  <h1 id="heroName"></h1>
+  <p id="heroRole" class="role"></p>
+  <div class="row">
+    <a class="btn primary" href="#projects">View projects</a>
+    <a class="btn" href="resume.pdf" download>Download resume</a>
+  </div>
+</section>
+
+<main>
+  <section id="about" class="sec reveal"><h2>About Me</h2><p id="aboutText"></p></section>
+  <section id="education" class="sec reveal"><h2>Education</h2><div id="eduList" class="timeline"></div></section>
+  <section id="skills" class="sec reveal"><h2>Skills</h2><div id="skillList" class="skills"></div></section>
+  <section id="projects" class="sec reveal">
+    <h2>Projects</h2>
+    <div id="filters" class="chips" role="group" aria-label="Filter projects"></div>
+    <div id="projectGrid" class="grid"></div>
+  </section>
+  <section id="contact" class="sec reveal">
+    <h2>Contact Me</h2>
+    <form id="contactForm" novalidate>
+      <label class="field">Name *<input id="cName" autocomplete="name"><small class="err" id="eName"></small></label>
+      <label class="field">Email *<input id="cEmail" type="email" autocomplete="email"><small class="err" id="eEmail"></small></label>
+      <label class="field wide">Message *<textarea id="cMsg" rows="4"></textarea><small class="err" id="eMsg"></small></label>
+      <div><button class="btn primary" type="submit">Send message</button></div>
+      <p id="formOk" class="ok" role="status"></p>
+    </form>
+  </section>
+</main>
+<footer><p id="footer"></p></footer>
+<button id="toTop" class="top-btn" aria-label="Back to top" hidden>↑</button>
+<script src="script.js"></script>
+</body>
+</html>
